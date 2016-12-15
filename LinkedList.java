@@ -32,7 +32,7 @@ public void add(int newPosition, T newEntry) {
 		int count = 1;
 		
 		if(newPosition <= 0){
-			break; 
+			return; 
 		}
 		
 		//Adding to end of list (but not over the number of
