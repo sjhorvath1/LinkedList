@@ -11,7 +11,7 @@ public class Tester {
 		list.add("Ian");
 		list.add("Kendrick");
 		System.out.println(list);
-		System.out.println(list.getEntry(2));
+		System.out.println(list.contains("Kendrick"));
 		//System.out.println(list);
 	
 	}

@@ -197,7 +197,15 @@ public class LinkedList<T> implements List<T> {
 
 	@Override
 	public boolean contains(T anEntry) {
-		// TODO Auto-generated method stub
+		int traverseCounter = 0;
+		Node currentNode = head;
+		while(traverseCounter < numObjects - 1){
+			currentNode = currentNode.getNext();
+			if(currentNode.getData() == anEntry){
+				return true;
+			}
+			traverseCounter++;
+		}
 		return false;
 	}
 
