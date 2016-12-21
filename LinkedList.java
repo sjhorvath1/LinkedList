@@ -129,6 +129,9 @@ public class LinkedList<T> implements List<T> {
 			head = tail = null;
 			numObjects --;
 		}
+		else if(givenPosition == 1){
+			removeFirst();
+		}
 		
 		else{
 			Node currentNode = head;
