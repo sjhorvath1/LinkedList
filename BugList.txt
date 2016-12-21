@@ -1,3 +1,0 @@
-1) If one adds a node to an empty list using the
-add function that takes two inputs, and then
-prints the list, they will find that the list is empty. Working on a fix.

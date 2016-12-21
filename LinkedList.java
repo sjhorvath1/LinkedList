@@ -26,7 +26,7 @@ public class LinkedList<T> implements List<T> {
 	}
 
 	@Override
-public void add(int newPosition, T newEntry) {
+	public void add(int newPosition, T newEntry) {
 		
 		Node<T> n1 = new Node<T>(newEntry);
 		int count = 1;
