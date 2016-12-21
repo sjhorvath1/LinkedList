@@ -12,7 +12,11 @@ public class Tester {
 		list.add(3,"Jim");
 		list.add(4,"Tony");
 		System.out.println(list);
-		list.remove(1);
+		System.out.println("testing removefirst");
+		list.removeFirst();
+		System.out.println(list);
+		System.out.println("testing removelast");
+		list.removeLast();
 		System.out.println(list);
 	}
 

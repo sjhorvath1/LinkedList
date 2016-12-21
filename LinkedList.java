@@ -75,7 +75,46 @@ public class LinkedList<T> implements List<T> {
 		}
 		
 	}
-
+	
+	public T removeFirst(){
+		T returnElement = (T) head.getData();
+		if(numObjects == 0){
+			return null;
+		}
+		else if(numObjects ==1){
+			head = tail = null;
+		}
+		else{
+			head = head.getNext();
+		}
+		numObjects --;
+		return returnElement;
+		
+	}
+	
+	public T removeLast(){
+		T returnElement = (T) tail.getData();
+		if(numObjects == 0){
+			return null;
+		}
+		else if(numObjects == 1){
+			head = tail = null;
+		}
+		else{
+			Node<T> currentNode = head;
+			Node<T> prevNode = null;
+			
+			while(currentNode.getNext() != null){
+				prevNode = currentNode;
+				currentNode = currentNode.getNext();	
+			}
+			tail = prevNode;
+			prevNode.setNext(null);
+			numObjects --;
+		}
+		return returnElement;
+	}
+		
 	@Override
 	public T remove(int givenPosition) {
 		T returnElement = null;
