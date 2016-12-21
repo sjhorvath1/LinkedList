@@ -7,9 +7,12 @@ public class Tester {
 		System.out.println(list);
 		list.add("Bob");
 		list.add("Tony");
+		list.add("Jim");
+		list.add("Ian");
+		list.add("Kendrick");
 		System.out.println(list);
-		list.replace(2, "Sam");
-		System.out.println(list);
+		System.out.println(list.getEntry(2));
+		//System.out.println(list);
 	
 	}
 	

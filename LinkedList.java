@@ -182,8 +182,17 @@ public class LinkedList<T> implements List<T> {
 
 	@Override
 	public T getEntry(int givenPosition) {
-		// TODO Auto-generated method stub
-		return null;
+		T returnElement = null;
+		Node currentNode = head;
+		int traverseCounter = 0;
+		while(traverseCounter < numObjects){
+			if(traverseCounter == givenPosition - 1){
+				return returnElement = (T)currentNode.getData();
+			}
+			currentNode = currentNode.getNext();
+			traverseCounter++;
+		}
+		return returnElement;
 	}
 
 	@Override
