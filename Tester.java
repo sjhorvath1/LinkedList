@@ -6,17 +6,12 @@ public class Tester {
 		LinkedList<String> list = new LinkedList<String>();
 		System.out.println(list);
 		list.add("Bob");
+		list.add("Tony");
 		System.out.println(list);
-		list.add(2, "Sam");
+		list.replace(2, "Sam");
 		System.out.println(list);
-		list.add(3,"Jim");
-		list.add(4,"Tony");
-		System.out.println(list);
-		list.remove(1);
-		System.out.println(list);
-		list.remove(3);
-		System.out.println(list);
-
+	
 	}
+	
 
 }

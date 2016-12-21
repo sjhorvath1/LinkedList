@@ -160,7 +160,23 @@ public class LinkedList<T> implements List<T> {
 
 	@Override
 	public void replace(int givenPosition, T newEntry) {
-		// TODO Auto-generated method stub
+		Node addNode = new Node(newEntry);
+		Node prevNode = null;
+		Node currentNode = head;
+		int traverseCount = 0;
+		if(givenPosition == 1){
+			addNode.setNext(head.getNext());
+			head = addNode;
+		}
+		while(traverseCount < numObjects){
+			prevNode = currentNode;
+			currentNode = currentNode.getNext();
+			traverseCount++;
+			if(traverseCount == givenPosition - 1){
+				addNode.setNext(currentNode.getNext());
+				prevNode.setNext(addNode);
+			}
+		}
 		
 	}
 
