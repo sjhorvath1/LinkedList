@@ -78,13 +78,41 @@ public class LinkedList<T> implements List<T> {
 
 	@Override
 	public T remove(int givenPosition) {
-		// TODO Auto-generated method stub
-		return null;
+		T returnElement = null;
+	
+		if(numObjects == 0){
+			System.out.println("Empty list!");
+			return returnElement;
+		}
+		
+		else if(numObjects == 1){
+			returnElement = (T) head.getData();
+			head = tail = null;
+			numObjects --;
+		}
+		
+		else{
+			Node currentNode = head;
+			Node prevNode = null;
+			int traverseCount = 0 ;
+			while(traverseCount < numObjects){
+				prevNode = currentNode;
+				currentNode = currentNode.getNext();
+				traverseCount++;
+				if(traverseCount == givenPosition - 1){
+					prevNode.setNext(currentNode.getNext());
+					returnElement = (T) currentNode.getData();
+				}
+			}
+				
+		}
+		
+		return returnElement;
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
+		head = tail = null;
 		
 	}
 
@@ -108,14 +136,17 @@ public class LinkedList<T> implements List<T> {
 
 	@Override
 	public int getLength() {
-		// TODO Auto-generated method stub
-		return 0;
+		return numObjects;
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		if(numObjects == 0){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 	@Override
