@@ -155,6 +155,7 @@ public class LinkedList<T> implements List<T> {
 	@Override
 	public void clear() {
 		head = tail = null;
+		numObjects = 0;
 		
 	}
 
@@ -199,12 +200,17 @@ public class LinkedList<T> implements List<T> {
 	public boolean contains(T anEntry) {
 		int traverseCounter = 0;
 		Node currentNode = head;
-		while(traverseCounter < numObjects - 1){
-			currentNode = currentNode.getNext();
-			if(currentNode.getData() == anEntry){
-				return true;
+		if(head.getData() == anEntry){
+			return true;
+		}
+		else{
+			while(traverseCounter < numObjects - 1){
+				currentNode = currentNode.getNext();
+				if(currentNode.getData() == anEntry){
+					return true;
+				}
+				traverseCounter++;
 			}
-			traverseCounter++;
 		}
 		return false;
 	}
