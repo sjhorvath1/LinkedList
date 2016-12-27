@@ -1,4 +1,4 @@
-
+//TODO Fix list positioning, having positioning count start at 1 is stupid. 
 public class LinkedList<T> implements List<T> {
 	private Node head;
 	private Node tail;
